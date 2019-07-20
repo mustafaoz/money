@@ -54,7 +54,7 @@ gradle clean build
 }
 ```
 
-## In Memory Test Data:
+## In Memory Test Data
 You've got two repository already created and stored in memory when start up. 
 
 Account Repository:
