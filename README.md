@@ -35,16 +35,16 @@ gradle clean build
 ```
 
 ## API Details
-- Name: List Accounts
-  Description: This end point prints the accounts list in JSON format.
-  Http Method: GET
-  URL: localhost:8080/accounts
+- Name: List Accounts<br/>
+  Description: This end point prints the accounts list in JSON format.<br/>
+  Http Method: GET<br/>
+  URL: localhost:8080/accounts<br/>
 
-- Name: Make Money Transfer
-  Description: This end ponit perform some checks to make sure whether the transfer is same the make the transfer.
-  Http Method: POST
-  URL: localhost:8080/transfer
-  Content-Type: application/json
+- Name: Make Money Transfer<br/>
+  Description: This end ponit perform some checks to make sure whether the transfer is same the make the transfer.<br/>
+  Http Method: POST<br/>
+  URL: localhost:8080/transfer<br/>
+  Content-Type: application/json<br/>
   Request Body Example: 
 ```shell
 {
@@ -58,6 +58,7 @@ gradle clean build
 You've got two repository already created and stored in memory when start up. 
 
 Account Repository:
+```shell
 Account Number | Owner Id  | Balance       | Currency
 =====================================================
 50001            1001        10000.00        GBP
@@ -65,8 +66,10 @@ Account Number | Owner Id  | Balance       | Currency
 50003            1003        10000.00        GBP
 50004            1004        10000.00        GBP
 50005            1005        10000.00        USD
+```
 
 User Repository: 
+```shell
 User Id  |  Name
 =============================
 1001        Darlene J Halter
@@ -74,3 +77,4 @@ User Id  |  Name
 1003        Mario Burkett
 1004        Sharon Turner
 1005        Carol M Bickford
+```
