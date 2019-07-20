@@ -1,10 +1,14 @@
 package uk.co.incircity.money.controller;
 
-import uk.co.incircity.money.model.Account;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+import uk.co.incircity.money.model.Account;
+import uk.co.incircity.money.model.MoneyTransfer;
 import uk.co.incircity.money.service.MoneyService;
 
 import java.util.List;
@@ -16,13 +20,28 @@ public class MoneyController {
     @Autowired
     MoneyService moneyService;
 
-    @RequestMapping("/greeting")
-    public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name) {
-        return "Hello " + name + "!";
+    @PostMapping(path = "/transfer", consumes = "application/json")
+    public ResponseEntity transferMoney(@RequestBody MoneyTransfer moneyTransfer) {
+
+        try {
+            moneyService.transferMoney(moneyTransfer);
+        }
+        catch (Exception e) {
+            return ResponseEntity
+                    .status(HttpStatus.BAD_REQUEST)
+                    .body(e.getMessage());
+        }
+
+        return ResponseEntity
+                .status(HttpStatus.OK)
+                .body("Transfer has been done successfully");
     }
 
-    @RequestMapping("/accounts")
-    public List<Account> getAccountList() {
-        return moneyService.getAccountList();
+    @GetMapping(path = "/accounts", produces = "application/json")
+    public ResponseEntity<List<Account>> getAccounts() {
+
+        return ResponseEntity
+                .status(HttpStatus.OK)
+                .body(moneyService.getAccountList());
     }
 }

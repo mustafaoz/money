@@ -2,7 +2,6 @@ package uk.co.incircity.money.repository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import uk.co.incircity.money.datastore.AccountStore;
-import uk.co.incircity.money.datastore.AccountStoreImpl;
 import uk.co.incircity.money.model.Account;
 import org.springframework.stereotype.Repository;
 
@@ -21,6 +20,10 @@ public class AccountRepositoryImpl implements  AccountRepository {
 
     @Override
     public Account getAccount(Integer accountNumber) {
-        return accountStore.getAccountList().stream().filter(x -> x.getAccountNumber().equals(accountNumber)).findFirst().get();
+        return accountStore.getAccountList()
+                .stream()
+                .filter(x -> x.getAccountNumber().equals(accountNumber))
+                .findFirst()
+                .orElseGet(() -> new Account.AccountBuilder().accountNumber(0).build());
     }
 }

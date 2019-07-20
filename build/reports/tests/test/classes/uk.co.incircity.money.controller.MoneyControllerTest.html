@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class uk.co.incircity.money.controller.MoneyControllerTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class uk.co.incircity.money.controller.MoneyControllerTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/uk.co.incircity.money.controller.html">uk.co.incircity.money.controller</a> &gt; MoneyControllerTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">3</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.157s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">getAccounts_ProperRequest_SuccessResponse</td>
+<td class="success">0.016s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">transfer_BadRequest_ErrorResponse</td>
+<td class="success">0.010s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">transfer_ProperRequest_SuccessResponse</td>
+<td class="success">0.131s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2019-07-21 00:16:35.780  INFO 4076 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [uk.co.incircity.money.controller.MoneyControllerTest], using SpringBootContextLoader
+2019-07-21 00:16:35.781  INFO 4076 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [uk.co.incircity.money.controller.MoneyControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-07-21 00:16:35.781  INFO 4076 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [uk.co.incircity.money.controller.MoneyControllerTest]: MoneyControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2019-07-21 00:16:35.792  INFO 4076 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration uk.co.incircity.money.Application for test class uk.co.incircity.money.controller.MoneyControllerTest
+2019-07-21 00:16:35.793  INFO 4076 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-07-21 00:16:35.794  INFO 4076 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4d15b808, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2fea005b, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@5fd2ccc7, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@365033b0, org.springframework.test.context.support.DirtiesContextTestExecutionListener@56e5188a, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@29f222d5, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@608f77d8, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@57f505ca, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@29aa76f6, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@11760d9c]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.1.3.RELEASE)
+
+2019-07-21 00:16:35.806  INFO 4076 --- [    Test worker] u.c.i.m.controller.MoneyControllerTest   : Starting MoneyControllerTest on Efnans-MacBook-Pro.local with PID 4076 (started by moz in /Users/moz/IdeaProjects/money)
+2019-07-21 00:16:35.807  INFO 4076 --- [    Test worker] u.c.i.m.controller.MoneyControllerTest   : No active profile set, falling back to default profiles: default
+2019-07-21 00:16:36.112  INFO 4076 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-21 00:16:36.238  INFO 4076 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2019-07-21 00:16:36.238  INFO 4076 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2019-07-21 00:16:36.247  INFO 4076 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 9 ms
+2019-07-21 00:16:36.255  INFO 4076 --- [    Test worker] u.c.i.m.controller.MoneyControllerTest   : Started MoneyControllerTest in 0.46 seconds (JVM running for 4.126)
+{&quot;fromAccountNumber&quot;:1,&quot;toAccountNumber&quot;:2,&quot;amount&quot;:100}
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /accounts
+       Parameters = {}
+          Headers = [Accept:&quot;application/json&quot;]
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = uk.co.incircity.money.controller.MoneyController
+           Method = public org.springframework.http.ResponseEntity&lt;java.util.List&lt;uk.co.incircity.money.model.Account&gt;&gt; uk.co.incircity.money.controller.MoneyController.getAccounts()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:&quot;application/json;charset=UTF-8&quot;]
+     Content type = application/json;charset=UTF-8
+             Body = []
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 5.2</a> at 20.Tem.2019 22:16:36</p>
+</div>
+</div>
+</body>
+</html>

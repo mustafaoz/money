@@ -7,7 +7,7 @@ public class Account {
 
     private Integer accountNumber;
     private Integer ownerId;
-    private String accountName;
+    private String ownerName;
     private BigDecimal balance;
     private String currency;
 
@@ -28,12 +28,10 @@ public class Account {
         this.ownerId = ownerId;
     }
 
-    public String getAccountName() {
-        return accountName;
-    }
+    public String getOwnerName() { return ownerName; }
 
-    public void setAccountName(String accountName) {
-        this.accountName = accountName;
+    public void setOwnerName(String ownerName) {
+        this.ownerName = ownerName;
     }
 
     public BigDecimal getBalance() {
@@ -59,7 +57,7 @@ public class Account {
 
     @Override
     public int hashCode() {
-        return Objects.hash(accountNumber, accountName);
+        return Objects.hash(accountNumber, currency);
     }
 
     @Override
@@ -67,7 +65,7 @@ public class Account {
         return "Account{" +
                 "accountNumber=" + accountNumber +
                 ", ownerId=" + ownerId +
-                ", accountName='" + accountName + '\'' +
+                ", ownerName='" + ownerName + '\'' +
                 ", balance=" + balance +
                 ", currency='" + currency + '\'' +
                 '}';
@@ -77,12 +75,12 @@ public class Account {
 
         private Integer accountNumber;
         private Integer ownerId;
-        private String accountName;
+        private String ownerName;
         private BigDecimal balance;
         private String currency;
 
-        public AccountBuilder accountName(String accountName) {
-            this.accountName = accountName;
+        public AccountBuilder ownerName(String ownerName) {
+            this.ownerName = ownerName;
             return this;
         }
         public AccountBuilder accountNumber(Integer accountNumber) {
@@ -104,7 +102,7 @@ public class Account {
         public Account build() {
             Account account = new Account();
             account.setAccountNumber(accountNumber);
-            account.setAccountName(accountName);
+            account.setOwnerName(ownerName);
             account.setOwnerId(ownerId);
             account.setBalance(balance);
             account.setCurrency(currency);
